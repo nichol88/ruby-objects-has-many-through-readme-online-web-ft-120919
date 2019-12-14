@@ -24,7 +24,12 @@ class Waiter
   def best_tipper
     x = 0
     c = nil
-    self.meals.each{|meal| meal.tip = x && c = meal.customer if x < meal.tip}
+    self.meals.each{|meal|
+      if x < meal.tip
+        meal.tip = x &&
+        c = meal.customer
+      end
+      }
     c
   end
 
