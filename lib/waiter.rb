@@ -23,8 +23,9 @@ class Waiter
 
   def best_tipper
     x = 0
+    c = nil
     self.meals.each{|meal| meal.tip = x if x < meal.tip}
-    x
+
   end
 
 end
