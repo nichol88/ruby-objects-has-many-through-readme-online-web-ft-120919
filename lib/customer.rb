@@ -22,7 +22,7 @@ class Customer
   end
 
   def waiters
-    Meal.all.select do |meal|
+    self.meals.select do |meal|
       meal.waiter
     end
   end
