@@ -22,6 +22,6 @@ class Waiter
   end
 
   def best_tipper
-
+    self.meals.inject(0){|memo, meal| meal.tip > memo}
   end
 end
