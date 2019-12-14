@@ -22,6 +22,7 @@ class Waiter
   end
 
   def best_tipper
-    self.meals.select{|memo, meal| meal.tip = memo if memo < meal.tip}
+    x = 0
+    self.meals.select{|meal| meal.tip = memo if memo < meal.tip}
   end
 end
